@@ -1,0 +1,37 @@
+{
+	"name": "FaZ-MD",
+	"description": "Wa Bot multi device ",
+        "logo": "https://imgur.com/AelfUJg.jpg",
+	"keywords": [
+		"whatsapp",
+		"bot"
+	],
+	"repository": "https://github.com/inrlwabot/FaZ-MD",
+	"stack": "container",
+    "env": { 
+        "HANDLERS": {
+            "description": "Prefix of commands. Can be also false",
+            "required": true,
+            "value":".,"
+        },
+       "HEROKU_API_KEY": {
+            "description": "For updating bot and setting vars remotely",
+            "required": true,
+            "value":""
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Exact name which you gave at the top",
+            "required": true,
+            "value":""
+        }
+    },
+    "addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "heroku-community/apt"
+      },
+      {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+      }]
+  }
