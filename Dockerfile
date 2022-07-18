@@ -1,4 +1,4 @@
-FROM quay.io/inrlwabot/faz-md
+FROM quay.io/inrlwabot/faz-md:beta
 
 RUN git clone https://github.com/inrlwabot/faz-md /root/inrl
 WORKDIR /root/inrl
